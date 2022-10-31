@@ -14,9 +14,9 @@ public class Sentiment {
 	public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 		Language1 message = getSentiment("子どもたちがいなかったので、 鳥たちは歌いたいと思いませんでしたし、 木々は花を咲かせるのを忘れておりました。");
 		if (message != null) {
-			System.out.println(message.documents[0].confidenceScores.positive);
-			System.out.println(message.documents[0].confidenceScores.neutral);
-			System.out.println(message.documents[0].confidenceScores.negative);
+			System.out.println("Positive:" + message.documents[0].confidenceScores.positive);
+			System.out.println("Neutral:" + message.documents[0].confidenceScores.neutral);
+			System.out.println("Negative:" + message.documents[0].confidenceScores.negative);
 		}
 	}
 
@@ -57,12 +57,14 @@ class Language1 {
 
 class Documents1 {
 	ConfidenceScores confidenceScores;
+	String id;
+	String movelVersion;
 }
 
 class ConfidenceScores {
-	double negative;
-	double neutral;
-	double positive;
+	float negative;
+	float neutral;
+	float positive;
 }
 
 class Source1 {
