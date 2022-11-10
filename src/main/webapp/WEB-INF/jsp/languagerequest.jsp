@@ -10,7 +10,7 @@
 <body>
 <h1>CognitiveServiceを使うサイト</h1>
 
-<h3>センチメントを表示したい文字列を入力してください</h3>
+<h3>Languagerequest</h3>
 <form method="POST" action="./result">
 <input type="TEXT" name="string" />
 <input type="submit" />
