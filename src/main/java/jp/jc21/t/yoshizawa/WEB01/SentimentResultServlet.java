@@ -35,7 +35,9 @@ public class SentimentResultServlet extends HttpServlet {
 			float message2 = result.documents[0].confidenceScores.neutral;
 			float message3 = result.documents[0].confidenceScores.negative;
 			request.setAttribute("message",message1);
-			request.getRequestDispatcher("/WEB-INF/sentimentResult.jsp").forward(request, response);;
+			request.setAttribute("message2",message2);
+			request.setAttribute("message3",message3);
+			request.getRequestDispatcher("/WEB-INF/jsp/sentimentResult.jsp").forward(request, response);;
 		} catch (URISyntaxException e) {
 		} catch (InterruptedException e) {
 		}
